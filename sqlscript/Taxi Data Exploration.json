@@ -1,0 +1,18 @@
+{
+	"name": "Taxi Data Exploration",
+	"properties": {
+		"description": "First example on how to use built-in sql serverless pool ",
+		"content": {
+			"query": "SELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://devindatalake.dfs.core.windows.net/synw-personal-storage/NYCTripSmall.parquet',\n        FORMAT='PARQUET'\n    ) AS [result]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"poolName": "Built-in",
+				"databaseName": "master"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
