@@ -1,0 +1,234 @@
+{
+	"name": "copy-player-data",
+	"properties": {
+		"activities": [
+			{
+				"name": "copy csv data",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ID",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "points",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "points",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "possessions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "possessions",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "team_pace",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "team_pace",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "GP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "GP",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "MPG",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MPG",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "TS%",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TS%",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "AST",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AST",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "TO",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "TO",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "USG",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "USG",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "ORR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ORR",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "DRR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DRR",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "REBR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "REBR",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "PER",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PER",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "playerdata",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "player",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
