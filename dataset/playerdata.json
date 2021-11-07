@@ -1,0 +1,88 @@
+{
+	"name": "playerdata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "player_data.csv",
+				"container": "marketing"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ID",
+				"type": "String"
+			},
+			{
+				"name": "points",
+				"type": "String"
+			},
+			{
+				"name": "possessions",
+				"type": "String"
+			},
+			{
+				"name": "team_pace",
+				"type": "String"
+			},
+			{
+				"name": "Unnamed: 4",
+				"type": "String"
+			},
+			{
+				"name": "Unnamed: 5",
+				"type": "String"
+			},
+			{
+				"name": "GP",
+				"type": "String"
+			},
+			{
+				"name": "MPG",
+				"type": "String"
+			},
+			{
+				"name": "TS%",
+				"type": "String"
+			},
+			{
+				"name": "AST",
+				"type": "String"
+			},
+			{
+				"name": "TO",
+				"type": "String"
+			},
+			{
+				"name": "USG",
+				"type": "String"
+			},
+			{
+				"name": "ORR",
+				"type": "String"
+			},
+			{
+				"name": "DRR",
+				"type": "String"
+			},
+			{
+				"name": "REBR",
+				"type": "String"
+			},
+			{
+				"name": "PER",
+				"type": "String"
+			}
+		]
+	}
+}
