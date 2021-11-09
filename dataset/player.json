@@ -5,6 +5,9 @@
 			"referenceName": "synw-personal-WorkspaceDefaultStorage",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "Player Data"
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
