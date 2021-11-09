@@ -31,7 +31,7 @@
 								},
 								{
 									"name": "Destination",
-									"value": "staging/AdventureWorks/{year}/{month}/{day}/@{item().destination.fileName}"
+									"value": "staging/AdventureWorks/@{item().destination.fileName}"
 								}
 							],
 							"typeProperties": {
