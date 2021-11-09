@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "Player Data"
+			"name": "Player Data Datasets"
 		},
 		"annotations": [],
 		"type": "Parquet",

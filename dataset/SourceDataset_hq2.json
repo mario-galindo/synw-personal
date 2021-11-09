@@ -11,7 +11,7 @@
 			}
 		},
 		"folder": {
-			"name": "AdventureWorks_Datasets"
+			"name": "AdventureWorks Datasets"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
