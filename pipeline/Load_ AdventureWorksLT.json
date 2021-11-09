@@ -1,0 +1,152 @@
+{
+	"name": "Load_ AdventureWorksLT",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach_hq2",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.cw_items",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Copy_hq2",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [
+								{
+									"name": "Source",
+									"value": "SalesLT.@{item().source.table}"
+								},
+								{
+									"name": "Destination",
+									"value": "staging/AdventureWorks/@{item().destination.fileName}"
+								}
+							],
+							"typeProperties": {
+								"source": {
+									"type": "AzureSqlSource",
+									"partitionOption": "None"
+								},
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
+									}
+								},
+								"enableStaging": false,
+								"validateDataConsistency": false
+							},
+							"inputs": [
+								{
+									"referenceName": "SourceDataset_hq2",
+									"type": "DatasetReference",
+									"parameters": {
+										"cw_table": "@item().source.table"
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "DestinationDataset_hq2",
+									"type": "DatasetReference",
+									"parameters": {
+										"cw_fileName": "@item().destination.fileName"
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"cw_items": {
+				"type": "Array",
+				"defaultValue": [
+					{
+						"source": {
+							"table": "Address"
+						},
+						"destination": {
+							"fileName": "Address.csv"
+						}
+					},
+					{
+						"source": {
+							"table": "Customer"
+						},
+						"destination": {
+							"fileName": "Customer.csv"
+						}
+					},
+					{
+						"source": {
+							"table": "CustomerAddress"
+						},
+						"destination": {
+							"fileName": "CustomerAddress.csv"
+						}
+					},
+					{
+						"source": {
+							"table": "Product"
+						},
+						"destination": {
+							"fileName": "Product.csv"
+						}
+					},
+					{
+						"source": {
+							"table": "ProductCategory"
+						},
+						"destination": {
+							"fileName": "ProductCategory.csv"
+						}
+					},
+					{
+						"source": {
+							"table": "ProductModel"
+						},
+						"destination": {
+							"fileName": "ProductModel.csv"
+						}
+					},
+					{
+						"source": {
+							"table": "SalesOrderDetail"
+						},
+						"destination": {
+							"fileName": "SalesOrderDetail.csv"
+						}
+					},
+					{
+						"source": {
+							"table": "SalesOrderHeader"
+						},
+						"destination": {
+							"fileName": "SalesOrderHeader.csv"
+						}
+					}
+				]
+			}
+		},
+		"annotations": []
+	}
+}
