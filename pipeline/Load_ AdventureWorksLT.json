@@ -79,72 +79,7 @@
 		"parameters": {
 			"cw_items": {
 				"type": "Array",
-				"defaultValue": [
-					{
-						"source": {
-							"table": "Address"
-						},
-						"destination": {
-							"fileName": "Address@concat(formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')"
-						}
-					},
-					{
-						"source": {
-							"table": "Customer"
-						},
-						"destination": {
-							"fileName": "Customer@concat(formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')"
-						}
-					},
-					{
-						"source": {
-							"table": "CustomerAddress"
-						},
-						"destination": {
-							"fileName": "CustomerAddress@concat(formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')"
-						}
-					},
-					{
-						"source": {
-							"table": "Product"
-						},
-						"destination": {
-							"fileName": "Product@concat(formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')"
-						}
-					},
-					{
-						"source": {
-							"table": "ProductCategory"
-						},
-						"destination": {
-							"fileName": "ProductCategory@concat(formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')"
-						}
-					},
-					{
-						"source": {
-							"table": "ProductModel"
-						},
-						"destination": {
-							"fileName": "ProductModel@concat(formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')"
-						}
-					},
-					{
-						"source": {
-							"table": "SalesOrderDetail"
-						},
-						"destination": {
-							"fileName": "SalesOrderDetail@concat(formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')"
-						}
-					},
-					{
-						"source": {
-							"table": "SalesOrderHeader"
-						},
-						"destination": {
-							"fileName": "SalesOrderHeader@concat(formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')"
-						}
-					}
-				]
+				"defaultValue": "[   {     \"source\": {       \"table\": \"Address\"     },     \"destination\": {       \"fileName\": @concat('Address',formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')     }   },   {     \"source\": {       \"table\": \"Customer\"     },     \"destination\": {       \"fileName\": @concat('Customer',formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')     }   },   {     \"source\": {       \"table\": \"CustomerAddress\"     },     \"destination\": {       \"fileName\": @concat('CustomerAddress',formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')     }   },   {     \"source\": {       \"table\": \"Product\"     },     \"destination\": {       \"fileName\": @concat('Product',formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')     }   },   {     \"source\": {       \"table\": \"ProductCategory\"     },     \"destination\": {       \"fileName\": @concat('ProductCategory',formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')     }   },   {     \"source\": {       \"table\": \"ProductModel\"     },     \"destination\": {       \"fileName\": @concat('ProductModel',formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')     }   },   {     \"source\": {       \"table\": \"SalesOrderDetail\"     },     \"destination\": {       \"fileName\": @concat('SalesOrderDetail',formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')     }   },   {     \"source\": {       \"table\": \"SalesOrderHeader\"     },     \"destination\": {       \"fileName\": @concat('SalesOrderHeader',formatDatetime(utcnow(),'dd-MM-yyy'),'.csv')     }   } ]"
 			}
 		},
 		"annotations": []
