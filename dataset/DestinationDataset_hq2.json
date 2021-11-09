@@ -16,7 +16,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().cw_fileName",
+					"value": "@concat(formatDateTime(adddays(utcnow(),-1),'yyyy'),'/',formatDateTime(adddays(utcnow(),-1),'MM'),'/',formatDateTime(adddays(utcnow(),-1),'dd'),'/',dataset().cw_fileName)",
 					"type": "Expression"
 				},
 				"folderPath": "AdventureWorks",
