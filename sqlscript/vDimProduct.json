@@ -2,7 +2,7 @@
 	"name": "vDimProduct",
 	"properties": {
 		"folder": {
-			"name": "AdventureWorks Sources"
+			"name": "AdventureWorksDW"
 		},
 		"content": {
 			"query": "CREATE VIEW dwh.vDimProduct as\n\nSELECT \n    P.ProductID,\n    P.Name ProductName,\n    P.ProductNumber,\n    P.Color,\n    PG.Name ProductCategory\nFROM vProduct P INNER JOIN vProductCategory PG on P.ProductCategoryID = PG.ProductCategoryID\n",

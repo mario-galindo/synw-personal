@@ -2,7 +2,7 @@
 	"name": "vProduct",
 	"properties": {
 		"folder": {
-			"name": "AdventureWorks Sources"
+			"name": "AdventureWorksDW"
 		},
 		"content": {
 			"query": "CREATE VIEW vProduct AS\n\nSELECT\n    ProductID,\n    Name,\n    ProductNumber,\n    Color,\n    StandardCost,\n    ListPrice,\n    Size,\n    Weight\n    ,\n    ProductCategoryID,\n    ProductModelID,\n    SellStartDate,\n    SellEndDate,\n    DiscontinuedDate\nFROM\n    OPENROWSET(\n        BULK 'https://devindatalake.dfs.core.windows.net/staging/AdventureWorks/2021/11/08/Product.csv',\n        FORMAT = 'CSV',\n        PARSER_VERSION='2.0',\n        HEADER_ROW= TRUE,\n        FIELDTERMINATOR =',',\n        ROWTERMINATOR = '\\n',\n        ESCAPECHAR = '\\\\',\n        FIELDQUOTE = '\"'     \n    ) as [Result]",
