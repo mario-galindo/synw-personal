@@ -1,6 +1,9 @@
 {
 	"name": "vProductCategory",
 	"properties": {
+		"folder": {
+			"name": "AdventureWorks Sources"
+		},
 		"content": {
 			"query": "CREATE   VIEW vProductCategory AS\n\nSELECT\n    ProductCategoryID,\n    ParentProductCategoryID,\n    Name,\n    rowguid,\n    ModifiedDate\nFROM\n    OPENROWSET(\n        BULK 'https://devindatalake.dfs.core.windows.net/staging/AdventureWorks/2021/11/08/ProductCategory.csv',\n        FORMAT = 'CSV',\n        HEADER_ROW = TRUE,\n        PARSER_VERSION = '2.0'\n    ) AS [result]\n",
 			"metadata": {
