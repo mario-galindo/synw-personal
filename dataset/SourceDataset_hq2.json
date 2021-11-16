@@ -1,10 +1,6 @@
 {
 	"name": "SourceDataset_hq2",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "AzureSqlAdventureWorks",
-			"type": "LinkedServiceReference"
-		},
 		"parameters": {
 			"cw_table": {
 				"type": "String"
