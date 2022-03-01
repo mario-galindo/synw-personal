@@ -5,7 +5,7 @@
 			"name": "AdventureWorksDW/Dimensions"
 		},
 		"content": {
-			"query": "CREATE VIEW dwh.vDimProduct as\n\nSELECT \n    P.ProductID,\n    P.Name ProductName,\n    P.ProductNumber,\n    P.Color,\n    PG.Name ProductCategory\nFROM vProduct P INNER JOIN vProductCategory PG on P.ProductCategoryID = PG.ProductCategoryID\n",
+			"query": "CREATE VIEW dwh.vDimProduct as\n\nSELECT \n    P.ProductID,\n    P.Name ProductName,\n    P.ProductNumber,\n    P.Color,\n    PG.Name ProductCategory\nFROM vProduct P INNER JOIN vProductCategory PG on P.ProductCategoryID = PG.ProductCategoryID\n\nSELECT * FROM dwh.vDimProduct\n",
 			"metadata": {
 				"language": "sql"
 			},
