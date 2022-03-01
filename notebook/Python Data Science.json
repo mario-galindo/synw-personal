@@ -17,7 +17,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "4423a4b3-9874-4b0f-931f-ea9b90701f3f"
+				"spark.autotune.trackingId": "7eef19e5-320d-49e2-8e31-7e1e8bdd371e"
 			}
 		},
 		"metadata": {
@@ -64,7 +64,7 @@
 				"source": [
 					"print(\"Hello Synapase Analytics\")"
 				],
-				"execution_count": 4
+				"execution_count": 7
 			},
 			{
 				"cell_type": "code",
@@ -82,7 +82,7 @@
 				"source": [
 					"1 + 1"
 				],
-				"execution_count": 5
+				"execution_count": 8
 			},
 			{
 				"cell_type": "code",
@@ -99,7 +99,7 @@
 				},
 				"source": [
 					"# File location and type\n",
-					"file_location = \"https://devindatalake.dfs.core.windows.net/synw-personal-storage/NYCTripSmall.parquet\"\n",
+					"file_location = \"abfss://synw-personal-storage@devindatalake.dfs.core.windows.net/NYCTripSmall.parquet\"\n",
 					"file_type = \"parquet\"\n",
 					"\n",
 					"NYCTripSmall_DF = spark.read.format(file_type).load(file_location)\n",
