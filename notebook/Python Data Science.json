@@ -17,7 +17,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "7eef19e5-320d-49e2-8e31-7e1e8bdd371e"
+				"spark.autotune.trackingId": "e1ea8ee2-dff0-464a-9e63-3da931eb7852"
 			}
 		},
 		"metadata": {
@@ -64,7 +64,7 @@
 				"source": [
 					"print(\"Hello Synapase Analytics\")"
 				],
-				"execution_count": 7
+				"execution_count": null
 			},
 			{
 				"cell_type": "code",
