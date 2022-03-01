@@ -17,7 +17,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "e1ea8ee2-dff0-464a-9e63-3da931eb7852"
+				"spark.autotune.trackingId": "d2bbb7cc-61a2-4842-a654-c9965a0e3bfa"
 			}
 		},
 		"metadata": {
@@ -95,7 +95,8 @@
 						"transient": {
 							"deleting": false
 						}
-					}
+					},
+					"collapsed": false
 				},
 				"source": [
 					"# File location and type\n",
@@ -107,7 +108,7 @@
 					"display(NYCTripSmall_DF)\n",
 					""
 				],
-				"execution_count": null
+				"execution_count": 14
 			}
 		]
 	}
