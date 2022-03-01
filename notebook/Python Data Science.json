@@ -17,7 +17,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "119d8659-f873-490e-8314-2bd45a808ed2"
+				"spark.autotune.trackingId": "87d3fca3-93e1-48ba-992d-051976e4c895"
 			}
 		},
 		"metadata": {
@@ -64,7 +64,7 @@
 				"source": [
 					"print(\"Hello Synapase Analytics\")"
 				],
-				"execution_count": 4
+				"execution_count": null
 			},
 			{
 				"cell_type": "code",
@@ -82,7 +82,7 @@
 				"source": [
 					"1 + 1"
 				],
-				"execution_count": 5
+				"execution_count": null
 			},
 			{
 				"cell_type": "code",
@@ -106,24 +106,6 @@
 					"  .load(file_location)\n",
 					"\n",
 					"display(NYCTripSmall_DF)\n",
-					""
-				],
-				"execution_count": 2
-			},
-			{
-				"cell_type": "code",
-				"metadata": {
-					"jupyter": {
-						"source_hidden": false,
-						"outputs_hidden": false
-					},
-					"nteract": {
-						"transient": {
-							"deleting": false
-						}
-					}
-				},
-				"source": [
 					""
 				],
 				"execution_count": null
